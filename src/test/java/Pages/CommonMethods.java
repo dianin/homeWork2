@@ -25,4 +25,9 @@ public class CommonMethods {
         driver.findElement(selector).click();
     }
 
+    public void visabilitySelector (By selector)
+    {
+        shortWait.until(ExpectedConditions.visibilityOfElementLocated(selector));
+    }
+
 }

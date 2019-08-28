@@ -15,12 +15,11 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
     testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
     compile group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '3.6.2'
 
 }
 
 tasks.withType(Test) {
-    scanForTestClasses = false
+    scanForTestClasses = true
     include "**/*Test.class" // whatever Ant pattern matches your test class files
 }

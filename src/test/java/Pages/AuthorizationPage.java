@@ -7,7 +7,7 @@ public class AuthorizationPage extends CommonMethods {
 
     private WebDriver driver;
     private String URL = "http://demo.litecart.net/admin/login.php?redirect_url=%2Fadmin%2F";
-    private By loginButton = By.xpath("//*[type='submit' and name = 'login']");
+    private By loginButton = By.xpath("//*[@type='submit' and @name='login']");
 
     public AuthorizationPage(WebDriver driver) {
         super(driver);
@@ -19,8 +19,9 @@ public class AuthorizationPage extends CommonMethods {
         driver.get(URL);
     }
 
-    public void authorization ()
+    public AdminPanelPage authorization ()
     {
         click(loginButton);
+        return new AdminPanelPage(driver);
     }
 }
